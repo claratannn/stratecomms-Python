@@ -1,0 +1,98 @@
+<!doctype html>
+{% extends 'baseAdmin.html' %}
+
+{% load static %}
+    {% block head %}
+    <link rel="stylesheet" href="{% static 'css/adminportofolio.css' %}">
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    {% endblock %}
+    
+    {% block content %}
+    <!-- <form action="">
+        <input type="text" name='testing' />
+        <button type='submit' ></button>
+      </form> -->
+      <div class="jarak">
+        <div class="container">
+          <h4 class="fw-bold">Portofolio <button class="btn default">+ New</button></h4>
+          <div class="jarak">
+            <div class="row">
+                <div class="col colangka">
+                    1.
+                </div>
+              <div class="col-3">
+                <img src="{% static 'images/artikel.png'%}"/>
+              </div>
+              <div class="col-8 text-start">
+                <div>
+                    <h3 class="fw-bold">REFLEKSI STRATECOMMS TAHUN 2021: KEMENTERIAN PEDULI SERTIFIKASI PROFESI DARI BNSP</h3>
+                    Perkembangan sertifikasi profesi Public Relations (PR) dari Badan Nasional Sertifikasi Profesi (BNSP) sudah disadari oleh banyak kalangan masyarakat. Hal ini terlihat dari para peserta dengan berlatar belakang pekerjaan yang beragam. Namun mereka tidak hanya mengetahui dan mencari sertifikasi profesinya saja .... <a type="button" href="#"><u>read more</u></a>
+                    
+                </div>
+                    <h6 style="float: left; margin-top: 2%;">31/12/2021, 13:53 WIB</h6>
+                    <a type="button" class="btn btn-primary edit" style="text-decoration: none; float: right;" href="#">Edit</a>
+                
+              </div>
+            </div>
+          </div>
+
+          
+          <div style="margin-top: -85px;">
+            <hr>
+            <div class="row">
+                <div class="col colangka">
+                    1.
+                </div>
+              <div class="col-3">
+                <img src="{% static 'images/artikel.png'%}"/>
+              </div>
+              <div class="col-8 text-start">
+                <div>
+                    <h3 class="fw-bold">REFLEKSI STRATECOMMS TAHUN 2021: KEMENTERIAN PEDULI SERTIFIKASI PROFESI DARI BNSP</h3>
+                    Perkembangan sertifikasi profesi Public Relations (PR) dari Badan Nasional Sertifikasi Profesi (BNSP) sudah disadari oleh banyak kalangan masyarakat. Hal ini terlihat dari para peserta dengan berlatar belakang pekerjaan yang beragam. Namun mereka tidak hanya mengetahui dan mencari sertifikasi profesinya saja .... <a type="button" href="#"><u>read more</u></a>
+                    
+                </div>
+                    <h6 style="float: left; margin-top: 2%;">31/12/2021, 13:53 WIB</h6>
+                    <a type="button" class="btn btn-primary edit" style="text-decoration: none; float: right;" href="#">Edit</a>
+                
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: -85px;">
+            <hr>
+            <div class="row">
+                <div class="col colangka">
+                    1.
+                </div>
+              <div class="col-3">
+                <img src="{% static 'images/artikel.png'%}"/>
+              </div>
+              <div class="col-8 text-start">
+                <div>
+                    <h3 class="fw-bold">REFLEKSI STRATECOMMS TAHUN 2021: KEMENTERIAN PEDULI SERTIFIKASI PROFESI DARI BNSP</h3>
+                    Perkembangan sertifikasi profesi Public Relations (PR) dari Badan Nasional Sertifikasi Profesi (BNSP) sudah disadari oleh banyak kalangan masyarakat. Hal ini terlihat dari para peserta dengan berlatar belakang pekerjaan yang beragam. Namun mereka tidak hanya mengetahui dan mencari sertifikasi profesinya saja .... <a type="button" href="#"><u>read more</u></a>
+                    
+                </div>
+                    <h6 style="float: left; margin-top: 2%;">31/12/2021, 13:53 WIB</h6>
+                    <a type="button" class="btn btn-primary edit" style="text-decoration: none; float: right;" href="#">Edit</a>
+                
+              </div>
+            </div>
+          </div>
+          
+
+
+        </div> 
+      </div>
+
+    {% endblock %}
+
+    {% block scripts %}
+    
+    <script>
+      feather.replace()
+    </script>
+    {% endblock %}
+</html>

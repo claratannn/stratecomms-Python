@@ -22,18 +22,23 @@ def portofolio(request):
 def isiPortofolio(request):
   return render(request, 'isiPortofolio.html')
 
-pendaftaran
+def pendaftaran(request):
+  return render(request, 'pendaftaran.html')
 
 def pendaftaranBerhasil(request):
   return render(request, 'pendaftaranBerhasil.html')
 
-<<<<<<< HEAD
 def adminLogin(request):
   return render(request, 'adminLogin.html')
 
 def adminHome(request):
   return render(request, 'adminHome.html')
-=======
+
 def adminArtikel(request):
   return render(request, 'admin/adminArtikel.html')
->>>>>>> b1c1f814263f5dd73c0e62540b23643d60ba0030
+
+def adminJadwal(request):
+  return render(request, 'admin/adminJadwal.html')
+
+def adminPortofolio(request):
+  return render(request, 'admin/adminPortofolio.html')
