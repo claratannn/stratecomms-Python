@@ -22,7 +22,8 @@ def portofolio(request):
 def isiPortofolio(request):
   return render(request, 'isiPortofolio.html')
 
-pendaftaran
+def pendaftaran(request):
+  return render(request, 'pendaftaran.html')
 
 def pendaftaranBerhasil(request):
   return render(request, 'pendaftaranBerhasil.html')
@@ -38,3 +39,8 @@ def adminArtikel(request):
 
 def editJadwal(request):
   return render(request, 'admin/editJadwal.html')
+def adminJadwal(request):
+  return render(request, 'admin/adminJadwal.html')
+
+def adminPortofolio(request):
+  return render(request, 'admin/adminPortofolio.html')
