@@ -49,9 +49,15 @@ def editArtikel(request):
 
 def editJadwal(request):
   return render(request, 'admin/editJadwal.html')
-  
+
 def adminJadwal(request):
   return render(request, 'admin/adminJadwal.html')
 
 def adminPortofolio(request):
   return render(request, 'admin/adminPortofolio.html')
+
+def addPortofolio(request):
+  return render(request, 'admin/addPortofolio.html')
+
+def editPortofolio(request):
+  return render(request, 'admin/editPortofolio.html')

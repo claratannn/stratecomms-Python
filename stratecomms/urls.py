@@ -33,4 +33,6 @@ urlpatterns = [
     path('isiPortofolio/', views.isiPortofolio, name='isiPortofolio'),
     path('addArtikel/', views.addArtikel, name='addArtikel'),
     path('editArtikel/', views.editArtikel, name='editArtikel'),
+    path('addPortofolio/', views.addPortofolio, name='addPortofolio'),
+    path('editPortofolio/', views.editPortofolio, name='editPortofolio'),
 ]
