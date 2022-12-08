@@ -19,7 +19,7 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
+    path('', views.homepage, name='homepage'),
     path('jadwalSertifikasi/', views.jadwalSertifikasi, name='jadwalSertifikasi'),
     path('artikel/', views.artikel, name='artikel'),
     path('isiArtikel/', views.isiArtikel, name='isiArtikel'),
