@@ -2,14 +2,14 @@
     margin-top: 2%;
 }
 
-h6{
+/* h6{
     font-weight: bold;
     text-align: left;
     margin-bottom: 3%;
     padding-bottom: 10px;
     font-size: 14pt;
     border-bottom: 1px solid;
-}
+} */
 
 u{
     color: blue;
@@ -25,4 +25,26 @@ u{
     padding-bottom: 10px;
     font-size: 14pt;
     border-bottom: 1px solid;
+}
+
+img{
+    width: 95%;
+    margin-top: 2%;
+}
+
+.edit{
+        background-image: linear-gradient(to right, rgba(195, 50, 40, 0.9), rgba(59, 23, 65, 0.9),rgba(21, 24, 87, 0.9),rgba(27, 120, 191, 0.9));
+        text-align: center;
+        color: #fff;
+        border-radius: 30px;
+        border-color: #fff;
+        font-weight: 700;
+        padding: 5px 15px;
+        margin-top: 5%;
+        margin-bottom: 12%;
+        /* height: 10%; */
+        /* width: 15%; */
+        text-decoration: none;
+        font-size: 12pt;
+        min-width: 100px;
 }
