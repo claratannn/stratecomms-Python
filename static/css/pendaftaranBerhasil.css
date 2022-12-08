@@ -1,0 +1,44 @@
+.bghome{
+    position: relative; 
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    
+  .bghome::before {    
+    content: "";
+    background-image: url('../images/homepagebg.jpg');
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.6;
+    -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 1)), to(rgba(255, 255, 255, 0)));
+    mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    /* filter: drop-shadow(30px 30px 30px rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); */
+  }
+
+.messageContainer{
+    border-radius: 20px;
+    margin-top: 25px;
+    padding-top: 20px;
+    height:40vh;
+    width:50vw;
+    font-weight:400;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    background-color: white;
+    text-align: center;
+}
+
+.confirmationText{
+    margin-top: 3vh;
+}
+
+.teamsLogo{
+    align-items: center;
+}

@@ -1,0 +1,92 @@
+<!doctype html>
+{%extends "base.html"%}
+
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/isiartikel.css' %}">
+    {% block head %}
+
+    {% endblock %}
+
+
+    
+    {% block content %}
+    <div class="jarak">
+        <div class="container">
+          <h6 class="fw-bold">Artikel</h6>
+          <div class="jarakjudul">
+            <div class="row">
+              <div class="isi">
+                  <h2 class="fw-bold">REFLEKSI STRATECOMMS TAHUN 2021: KEMENTERIAN PEDULI SERTIFIKASI PROFESI DARI BNSP</h2>
+                  <div class="garishr">31/12/2021, 13:53 WIB</div>
+                  <img src= () width="100%" height="40%"/>
+                  <br></br>
+                  <p>Perkembangan sertifikasi profesi Public Relations (PR) dari Badan Nasional Sertifikasi Profesi (BNSP) sudah disadari oleh banyak kalangan masyarakat.
+                       Hal ini terlihat dari para peserta dengan berlatar belakang pekerjaan yang beragam. Namun mereka tidak hanya mengetahui dan mencari sertifikasi profesinya saja, 
+                       beberapa diantaranya mengejar untuk mendapatkan gelar profesinya yaitu C.PR (Certified Public Relations) untuk mendukung karir. Untuk memperoleh gelar ini, peserta
+                        harus mengikuti uji kompetensi PR dari Lembaga Sertifikasi Profesi Public Relations Indonesia (LSP PRI) untuk  tiga skema dalam dua tahapan uji kompetensi. 
+                        LSP PRI adalah lembaga yang memperoleh ijin dari BNSP, untuk menyelenggarakan Uji Sertifikasi Profesi PR.</p>
+                  <p>Pada Bulan Desember 2021, Pimpinan STRATECOMMS, Dr Muhammad Adi Pribadi, C.PR menyerahkan sertifikat profesi PR untuk skema C.PR kepada Bapak Siko D.S.W, S.ST.,
+                         C.PR. Penyerahan sertifikat ini adalah untuk yang kedua kalinya oleh Pimpinan STRATECOMMS karena beliau harus mengikuti uji kompetensi PR dari LSP PRI - BNSP, 
+                         sebanyak dua kali untuk tiga skema dalam memperoleh gelar C.PR. Bapak Siko yang bekerja di Kementerian Keuangan Republik Indonesia sangat peduli dengan gelar profesi
+                          ini untuk menunjang karirnya. Hal ini menunjukkan bahwa lembaganya sangat memperhatikan pegawainya untuk memperoleh sertifikat profesi dari BNSP. </p>
+                  <p>STRATECOMMS bekerjasama dengan LSP PRI akan mengadakan uji kompetensi PR berikutnya pada sabtu 22 Januari 2022. Sedangkan, workshop persiapan uji kompetensi 
+                      PR akan dilaksanakan pada sabtu 15 Januari 2022. Silahkan menghubungi STRATECOMMS di nomer telpon 081390601398 untuk informasi lebih lanjut.</p>
+                  <p>Hal ini menjadi kebahagiaan tersendiri bagi STRATECOMMS yang selalu mendampingi para asesinya untuk maju bersama dalam meraih harapan terbaiknya. 
+                      Salam sehat dan sukses untuk kita semua dalam mengarungi waktu di tahun 2022.</p>
+                      <br></br>                
+              </div>
+              <div class="mb-3 row text-left">
+                <h2 class="fw-bold">LEAVE A REPLY.</h2>
+            </div>
+            <div class="col-6"> 
+              <form class="form-horizontal" method='post' onSubmit={this.handleSubmit}>
+                <Form.Group class="mb-3" controlId="Nama">
+                  <Form.Label>Name (required)</Form.Label>
+                  <Form.Control type="email" placeholder="name" />
+                </Form.Group>
+                <Form.Group class="mb-3" controlId="Email">
+                  <Form.Label>Email address</Form.Label>
+                  <Form.Control type="email" placeholder="name@example.com" />
+                </Form.Group>
+                <Form.Group class="mb-3" controlId="Website">
+                  <Form.Label>Website</Form.Label>
+                  <Form.Control type="email" placeholder="Website" />
+                </Form.Group>
+                <Form.Group class="mb-3" controlId="comment">
+                  <Form.Label>Comment (required)</Form.Label>
+                  <Form.Control as="textarea" rows={3} />
+                </Form.Group>
+                <Button variant="flat" type="submit" style="float:right;">
+                  Submit
+                </Button>
+            </form>
+            </div>
+            </div>
+          </div>
+
+        </div> 
+      </div>
+    {% endblock %}
+
+    <script src="{% static 'js/base.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <script>
+      $(document).ready(function () {
+        activeHome();
+      });
+    </script>
+
+    <script>
+    </script>
+    {% block scripts %}
+
+    {% endblock %}
+  </body>
+</html>
