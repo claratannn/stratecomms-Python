@@ -1,0 +1,26 @@
+<!doctype html>
+{%extends "base.html"%}
+
+{% load static %} 
+    
+    {% block head %} 
+    <link rel="stylesheet" href="{% static 'css/pendaftaranBerhasil.css' %}">
+    {% endblock %} 
+
+    {%block content%} 
+    
+    <div class="bghome">
+        <div class="container-fluid messageContainer">
+          <h1>Pendaftaran Berhasil!</h1>
+          <p class="confirmationText" >Pendaftaran Anda berhasil. Silahkan klik icon di bawah ini untuk join teams di Microsoft Teams.</p>
+          <h4><SiMicrosoftteams/></h4>
+        </div>
+      </div>
+    {% endblock %} 
+
+
+    {%block scripts%} 
+
+    {% endblock %}
+
+</html>
