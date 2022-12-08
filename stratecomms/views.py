@@ -1,10 +1,14 @@
 from django.shortcuts import render
 from .pages.pendaftaran import *
 
-def home(request):
-  return render(request, 'base.html')
-
 def homepage(request):
+  # cursor.execute('select * from peserta')
+  # data = cursor.fetchall()
+  # print(data)
+
+  # context = {
+  #   'data' : data
+  # }
   return render(request, 'homepage.html')
 
 def jadwalSertifikasi(request):
