@@ -61,3 +61,6 @@ def addPortofolio(request):
 
 def editPortofolio(request):
   return render(request, 'admin/editPortofolio.html')
+
+def addJadwal(request):
+  return render(request, 'admin/addJadwal.html')
