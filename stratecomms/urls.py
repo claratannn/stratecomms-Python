@@ -25,5 +25,7 @@ urlpatterns = [
     path('isiArtikel/', views.isiArtikel, name='isiArtikel'),
     path('pendaftaran/', views.pendaftaran, name='pendaftaran'),
     path('pendaftaranBerhasil/', views.pendaftaranBerhasil, name='pendaftaranBerhasil'),
-    path('adminArtikel/', views.adminArtikel, name='adminArtikel')
+    path('adminArtikel/', views.adminArtikel, name='adminArtikel'),
+    path('portofolio/', views.portofolio, name='portofolio'),
+    path('isiPortofolio/', views.isiPortofolio, name='isiPortofolio'),
 ]
