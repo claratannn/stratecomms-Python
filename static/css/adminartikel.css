@@ -68,3 +68,7 @@ img{
     border-color: black;
     background: #e7e7e7;
   }
+
+.colangka{
+    flex: 0.1 0 0% !important;
+}
