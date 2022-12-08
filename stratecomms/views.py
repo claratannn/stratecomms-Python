@@ -39,6 +39,7 @@ def adminArtikel(request):
 
 def editJadwal(request):
   return render(request, 'admin/editJadwal.html')
+
 def adminJadwal(request):
   return render(request, 'admin/adminJadwal.html')
 
