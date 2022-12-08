@@ -14,15 +14,15 @@
 
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-dark navbarStyle">
-      <div className="container-fluid" style="display: flex;"> 
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/">
-            <img src="{% static 'images/logo1.png' %}" alt="Logo" width="150px" height="20px"/>
-          </a>
-        </div>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav" style="float: right !important;">
+    <nav class="navbar bg-dark navbar-dark navbar-expand-md bg-faded justify-content-center navbarStyle">
+      <a class="navbar-brand" href="/" style="margin-left: 2vw;">
+        <img src="{% static 'images/logo1.png' %}" alt="Logo" width="150px" height="20px"/>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+          <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
             <li class="nav-item">
               <a class="nav-link aFontStyle navbarActive" style="text-align: right;" aria-current="page" href="/homepage">Home</a></li>;
             </li>
@@ -39,9 +39,8 @@
               <a class="nav-link aFontStyle" style="font-size: 10px;" href="/Pendaftaran"><b>PENDAFTARAN</b></a>
             </button>
           </ul>
-        </div>
       </div>
-    </nav>
+  </nav>
 
     
     {% block content %}
