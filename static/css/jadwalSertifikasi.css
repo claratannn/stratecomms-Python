@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+.container{
+  margin-top: 100px;
+  font-family: 'Poppins';
+  }z
+
+.judulbesar {
+  margin-top: 20px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.isi{
+  margin-left: 40px;
+
+}
+
+.juduljadwal {
+  font-size: 40px;
+}
+
+.subjuduljadwal{
+  border-bottom: 1px solid;
+}
+
+.event {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 30px;
+  color: #fff;
+  background-color: black;
+  width: 30%;
+  min-width: 200px;
+}
+
+.flyer {
+  width: 100%; 
+  height: auto;
+}
+
+.jrk{
+  padding-right: 50px;
+}
+
+.daftar{
+  background-image: linear-gradient(to right, rgba(195, 50, 40, 0.9), rgba(59, 23, 65, 0.9),rgba(21, 24, 87, 0.9),rgba(27, 120, 191, 0.9));
+  text-align: center;
+  color: #fff;
+  border: 2px solid white;
+  border-radius: 25px;
+  width: 50%;
+  min-width: 250px;
+}
