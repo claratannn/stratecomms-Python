@@ -20,3 +20,9 @@ def pendaftaran(request):
 
 def pendaftaranBerhasil(request):
   return render(request, 'pendaftaranBerhasil.html')
+
+def adminLogin(request):
+  return render(request, 'adminLogin.html')
+
+def adminHome(request):
+  return render(request, 'adminHome.html')

@@ -1,0 +1,40 @@
+<!doctype html>
+{%extends "baseAdmin.html"%}
+
+{% load static %} 
+    
+    {% block head %} 
+    <link rel="stylesheet" href="{% static 'css/adminHome.css' %}">
+    {% endblock %} 
+
+    {%block content%} 
+    
+    <div class="bghome">
+        <div class="container-fluid body">
+            <h1 class="menu">Menu</h1>   
+            <div class="d-grid gap-2 col-6">
+                <button class="btn btn-dark tombol"><a style="text-Decoration: none; font-Size: 18pt; " href="/AdminArtikel"><b>Artikel</b></a></button>
+            </div>
+            <div class="d-grid gap-2 col-6">
+                <button class="btn btn-dark tombol"><a style="text-Decoration: none; font-Size: 18pt;" href="/AdminJadwal"><b>Jadwal Sertifikasi</b></a></button>
+            </div>
+            <div class="d-grid gap-2 col-6">
+                <button class="btn btn-dark tombol"><a style="text-Decoration: none; font-Size: 18pt;" href="/AdminPortofolio"><b>Portofolio</b></a></button>
+            </div>
+            <div class="d-grid gap-2 col-6">
+                <button class="btn btn-dark tombol"><a style="text-Decoration: none; font-Size: 18pt;" href="/AdminGrafik"><b>Melihat Grafik Pengunjung</b></a></button>
+            </div>
+        </div>
+      </div>
+
+
+    
+
+    {% endblock %} 
+
+
+    {%block scripts%} 
+
+    {% endblock %}
+
+</html>
