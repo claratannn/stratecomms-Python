@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .pages.pendaftaran import *
 from .pages.admin.login import *
 from .pages.admin.isiArtikel import *
+from .pages.admin.adminArtikel import *
 from datetime import datetime
 
 def homepage(request):
@@ -40,8 +41,7 @@ adminLogin
 def adminHome(request):
   return render(request, 'admin/adminHome.html')
 
-def adminArtikel(request):
-  return render(request, 'admin/adminArtikel.html')
+adminArtikel
 
 def addArtikel(request):
   return render(request, 'admin/addArtikel.html')
