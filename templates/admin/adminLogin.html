@@ -11,26 +11,26 @@
     
     <div class="bghome">
         <div class="container-fluid body">
-            <h1 class="Login">LOGIN ADMIN</h1>   
-            <form class="form-horizontal" method='post' onSubmit={this.handleSubmit}>
-                <form class="form-horizontal" method='post' onSubmit={this.handleSubmit}>
+            <h1 class="Login">LOGIN ADMIN</h1>  
+                <form class="form-horizontal" method='POST' >
+                    {% csrf_token %}
                     <div class="mb-3 fillColumn">
                         <label>Username / Email : </label>
-                            <div class="col-7" >
-                                <input class="form-control" type="Username/Email" />
-                            </div>
+                        <div class="col-7" >
+                            <input class="form-control" name="email" type="Username/Email" />
+                        </div>
                     </div>
                     <div class="mb-3 fillColumn">
                         <label>Password : </label>
                         <div class="col-7" >
-                                <input class="form-control" type="Password" />
+                            <input class="form-control" name="password" type="Password" />
                         </div>
                     </div>
+                    <div class="d-grid gap-2 col-6">
+                        <button type="submit" class="btn btn-dark tombol"><b>LOGIN</b></button>
+                    </div>
                 </form>
-            </form>
-            <div class="d-grid gap-2 col-6">
-                <button class="btn btn-dark tombol"><a style="text-Decoration: none; font-Size: 18pt;" href="/AdminHome"><b>LOGIN</b></a></button>
-            </div>
+
         </div>
       </div>
 
