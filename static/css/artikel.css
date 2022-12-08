@@ -1,5 +1,17 @@
 .jarak{
+    margin-top: 1%;
+}
+
+.jarak1{
+    margin-top: 5%;
+}
+
+.jarak2{
     margin-top: 2%;
+}
+
+.textcolor{
+    color: black;
 }
 
 h6{
@@ -25,4 +37,9 @@ u{
     padding-bottom: 10px;
     font-size: 14pt;
     border-bottom: 1px solid;
+}
+
+.widthcarousel{
+    height: 80% !important;
+    color: black !important;
 }
