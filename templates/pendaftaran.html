@@ -8,49 +8,53 @@
     {% endblock %} 
 
     {%block content%} 
-    
+    {% if uploaded_file_url %}
+    <p>File uploaded at: <a href="{{ uploaded_file_url }}" style="color: black !important;">{{ uploaded_file_url }}</a></p>
+    {% endif %}
+
     <div class="bghome">
         <div class="container-fluid body">
         <h1>Pendaftaran</h1>
-                <form class="form-horizontal" method='post' onSubmit={this.handleSubmit}>
+            <form class="form-horizontal" method='POST' enctype="multipart/form-data">
+                {% csrf_token %}
                 <div class="row mb-3">
                     <label class="control-label col-sm-2 variabel">Nama Lengkap</label>
                         <div class="col-7 column">
-                            <input class="form-control size"  type="Nama Lengkap" />
+                            <input class="form-control size" name="nama"  type="Nama Lengkap" />
                         </div>
                 </div>
                 <div class="row mb-3">
                     <label class="control-label col-sm-2 variabel">Nomor Telepon (Whatsapp) </label>
                     <div class="col-7 column">
-                            <input class="form-control size" type="Nomor telepon" />
+                            <input class="form-control size" name="telp" type="Nomor telepon" />
                         </div>
                 </div>
                 <div class="row mb-3">
                     <label class="control-label col-sm-2 variabel" >Pas Foto (3x4) </label>
                     <div class="col-7 column">
-                            <input class="form-control size"  type="file"/>
+                            <input class="form-control size" name="foto" type="file"/>
                         </div>
                 </div>
                 <div class="row mb-3">
                     <label class="control-label col-sm-2 variabel">Curicculum Vitae (CV) </label>
                     <div class="col-7 column">
-                            <input class="form-control size"  type="file" />
+                            <input class="form-control size" name="cv" type="file" />
                         </div>
                 </div>
                 <div class="row mb-3">
                     <label class="control-label col-sm-2 variabel">Ijazah Terakhir </label>
                     <div class="col-7 column">
-                            <input class="form-control size"  type="file"/>
+                            <input class="form-control size" name="ijazah" type="file"/>
                         </div>
                 </div>
                 <div class="row mb-3">
                     <label class="control-label col-sm-2 variabel">Kartu Tanda Penduduk (KTP) </label>
                     <div class="col-7 column">
-                            <input class="form-control size"  type="file"/>
+                            <input class="form-control size" name="ktp"  type="file"/>
                         </div>
                 </div>
                 <div class="m-3 text-center">
-                <button class="pendaftaran"><a href="/Pendaftaran"><b>SUBMIT</b></a></button>
+                    <button type="submit" class="pendaftaran"><a href="/Pendaftaran"><b>SUBMIT</b></a></button>
                 </div>
             </form>
         </div>

@@ -12,7 +12,8 @@
   justify-content: center;
 }
   
-.bghome::before {    
+.bghome::before {  
+  max-width: 100%;  
   content: "";
   background-image: url('../images/homepagebg.jpg');
   background-size: cover;

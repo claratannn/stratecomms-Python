@@ -4,7 +4,7 @@
 {%load static%} 
 
 {%block head%} 
-<link rel="stylesheet" href="{% static 'css/isiArtikel.css' %}">
+<link rel="stylesheet" href="{% static 'css/isiPortofolio.css' %}">
 
 {% endblock %} 
 {%block content%} 
@@ -12,7 +12,7 @@
 
     <div class="jarak">
         <div class="container">
-          <h6 class="fw-bold">Artikel</h6>
+          <h6 class="fw-bold">Portofolio</h6>
           <div class="jarakjudul">
             <div class="row">
               <div class="isi">
@@ -39,22 +39,22 @@
                 <h2 class="fw-bold">LEAVE A REPLY.</h2>
             </div>
             <div class="col-6"> 
-              <form class="form-horizontal" method='post' onSubmit={this.handleSubmit}>
-                <form action="/action_page.php">
-                  <label for="name">Name (required)</label>
-                  <input type="text" id="name" name="name">
-              
-                  <label for="email">Email (not published)</label>
-                  <input type="text" id="email" name="email">
-
-                  <label for="website">Website</label>
-                  <input type="text" id="website" name="website">
-              
-                  <label for="comment">Comment (required)</label>
-                  <textarea></textarea>
-                  <input type="submit" value="Submit">
+                <form class="form-horizontal" method='post' onSubmit={this.handleSubmit}>
+                    <form action="/action_page.php">
+                      <label for="name">Name (required)</label>
+                      <input type="text" id="name" name="name">
+                  
+                      <label for="email">Email (not published)</label>
+                      <input type="text" id="email" name="email">
+    
+                      <label for="website">Website</label>
+                      <input type="text" id="website" name="website">
+                  
+                      <label for="comment">Comment (required)</label>
+                      <textarea></textarea> 
+                      <input type="submit" value="Submit">
+                    </form>
                 </form>
-            </form>
             </div>
             </div>
           </div>
