@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .pages.pendaftaran import *
 
 def home(request):
   return render(request, 'base.html')
@@ -15,8 +16,7 @@ def artikel(request):
 def isiArtikel(request):
   return render(request, 'isiArtikel.html')
 
-def pendaftaran(request):
-  return render(request, 'pendaftaran.html')
+pendaftaran
 
 def pendaftaranBerhasil(request):
   return render(request, 'pendaftaranBerhasil.html')
