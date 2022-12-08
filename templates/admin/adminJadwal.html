@@ -1,0 +1,61 @@
+<!doctype html>
+{%extends "baseAdmin.html"%}
+
+{%load static%} 
+
+{%block head%} 
+<link rel="stylesheet" href="{% static 'css/adminjadwal.css' %}">
+
+{% endblock %} 
+{%block content%} 
+<div class="container">
+    <div class="row">
+        <b class="judulbesar">Jadwal Sertifikasi<button class="btn default">+ New</button></b>
+    </div>
+    <div class="row">
+        <div class="col-3">
+        <button class="event">
+        <b style="font-Size: 15px; padding: 7px"> Upcoming Event </b></button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-5">
+            <img class="flyer" src="{% static 'images/jadwal.png' %}"alt="flyer" />
+        </div>
+        <div class="col-sm-7" >
+        <div class="jrk">
+            <div clas="isi">
+            <div class="row" style="margin-Bottom: 20px;">
+                <b class="juduljadwal">Sertifikasi Profesi Public Relations</b></div>
+            <div class="row" style="font-size: 24p; margin-Bottom: 10px;">
+                <b class="subjuduljadwal" >Workshop</b></div>
+            <div class="row" style="margin-Bottom: 20px;">
+                <b class="jadwal" >Selasa, 6 September 2022</b></div>
+            <div class="row" style="font-Size: 24px; margin-Bottom: 10px;">
+                <b class="subjuduljadwal" >Uji Kompetensi</b></div>
+            <div class="row" style="margin-Bottom: 20px;">
+                <b class="jadwal" >Sabtu, 10 September 2022</b></div>
+            <div class="row" style="font-Size: 24px; margin-Bottom: 10px;">
+                <b class="subjuduljadwal" >Syarat Pendaftaran</b></div>
+            <div class="row" style="margin-Bottom: 20px;">
+            <ul>
+                <li class="jadwal" >1 Foto cetak 3x4 sebanyak 5 lembar</li>
+                <li class="jadwal" >Curriculum Vitae (CV)</li>
+                <li class="jadwal" >Scan Ijazah pendidikan terakhir</li>
+                <li class="jadwal" >Scan Kartu Tanda Penduduk (KTP)</li>
+            </ul>
+            </div>
+            <button class="daftar"><a style="text-Decoration: none; font-Size: 20pt" href="/editJadwal"><b>Edit</b></a></button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %} 
+
+
+{%block scripts%} 
+
+{% endblock %}
+</html>
