@@ -4,14 +4,12 @@
 {%load static%} 
 
 {%block head%} 
-<link rel="stylesheet" href="{% static 'css/isiartikel.css' %}">
+<link rel="stylesheet" href="{% static 'css/isiArtikel.css' %}">
 
 {% endblock %} 
 {%block content%} 
 
 
-    
-    {% block content %}
     <div class="jarak">
         <div class="container">
           <h6 class="fw-bold">Artikel</h6>
@@ -20,7 +18,7 @@
               <div class="isi">
                   <h2 class="fw-bold">REFLEKSI STRATECOMMS TAHUN 2021: KEMENTERIAN PEDULI SERTIFIKASI PROFESI DARI BNSP</h2>
                   <div class="garishr">31/12/2021, 13:53 WIB</div>
-                  <img src= () width="100%" height="40%"/>
+                  <img src="{% static 'images/artikel.png' %}" width="100%" height="40%"/>
                   <br></br>
                   <p>Perkembangan sertifikasi profesi Public Relations (PR) dari Badan Nasional Sertifikasi Profesi (BNSP) sudah disadari oleh banyak kalangan masyarakat.
                        Hal ini terlihat dari para peserta dengan berlatar belakang pekerjaan yang beragam. Namun mereka tidak hanya mengetahui dan mencari sertifikasi profesinya saja, 
@@ -42,25 +40,20 @@
             </div>
             <div class="col-6"> 
               <form class="form-horizontal" method='post' onSubmit={this.handleSubmit}>
-                <Form.Group class="mb-3" controlId="Nama">
-                  <Form.Label>Name (required)</Form.Label>
-                  <Form.Control type="email" placeholder="name" />
-                </Form.Group>
-                <Form.Group class="mb-3" controlId="Email">
-                  <Form.Label>Email address</Form.Label>
-                  <Form.Control type="email" placeholder="name@example.com" />
-                </Form.Group>
-                <Form.Group class="mb-3" controlId="Website">
-                  <Form.Label>Website</Form.Label>
-                  <Form.Control type="email" placeholder="Website" />
-                </Form.Group>
-                <Form.Group class="mb-3" controlId="comment">
-                  <Form.Label>Comment (required)</Form.Label>
-                  <Form.Control as="textarea" rows={3} />
-                </Form.Group>
-                <Button variant="flat" type="submit" style="float:right;">
-                  Submit
-                </Button>
+                <form action="/action_page.php">
+                  <label for="name">Name (required)</label>
+                  <input type="text" id="name" name="name">
+              
+                  <label for="email">Email (not published)</label>
+                  <input type="text" id="email" name="email">
+
+                  <label for="website">Website</label>
+                  <input type="text" id="website" name="website">
+              
+                  <label for="comment">Comment (required)</label>
+                  <textarea></textarea>
+                  <input type="submit" value="Submit">
+                </form>
             </form>
             </div>
             </div>

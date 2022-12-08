@@ -20,3 +20,8 @@ def portofolio(request):
 
 def isiPortofolio(request):
   return render(request, 'isiPortofolio.html')
+def pendaftaran(request):
+  return render(request, 'pendaftaran.html')
+
+def pendaftaranBerhasil(request):
+  return render(request, 'pendaftaranBerhasil.html')
