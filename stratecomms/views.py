@@ -14,3 +14,9 @@ def artikel(request):
 
 def isiArtikel(request):
   return render(request, 'isiArtikel.html')
+
+def portofolio(request):
+  return render(request, 'portofolio.html')
+
+def isiPortofolio(request):
+  return render(request, 'isiPortofolio.html')

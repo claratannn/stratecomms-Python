@@ -20,8 +20,10 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
-    path('homepage/', views.homepage, name='homepage'),
     path('jadwalSertifikasi/', views.jadwalSertifikasi, name='jadwalSertifikasi'),
     path('artikel/', views.artikel, name='artikel'),
-    path('isiArtikel/', views.isiArtikel, name='isiArtikel')
+    path('isiArtikel/', views.isiArtikel, name='isiArtikel'),
+    path('portofolio/', views.portofolio, name='portofolio'),
+    path('isiPortofolio/', views.isiPortofolio, name='isiPortofolio'),
+    path('homepage/', views.homepage, name='homepage')
 ]
