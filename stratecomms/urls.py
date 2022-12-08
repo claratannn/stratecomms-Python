@@ -25,12 +25,10 @@ urlpatterns = [
     path('isiArtikel/', views.isiArtikel, name='isiArtikel'),
     path('pendaftaran/', views.pendaftaran, name='pendaftaran'),
     path('pendaftaranBerhasil/', views.pendaftaranBerhasil, name='pendaftaranBerhasil'),
-<<<<<<< HEAD
-    path('adminLogin/', views.adminLogin, name='adminLogin'),
-    path('adminHome/', views.adminHome, name='adminHome'),
-=======
     path('adminArtikel/', views.adminArtikel, name='adminArtikel'),
     path('portofolio/', views.portofolio, name='portofolio'),
     path('isiPortofolio/', views.isiPortofolio, name='isiPortofolio'),
->>>>>>> b1c1f814263f5dd73c0e62540b23643d60ba0030
+    path('adminLogin/', views.adminLogin, name='adminLogin'),
+    path('adminHome/', views.adminHome, name='adminHome'),
+    path('editJadwal/', views.editJadwal, name='editJadwal'),
 ]

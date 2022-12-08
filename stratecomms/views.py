@@ -27,13 +27,14 @@ pendaftaran
 def pendaftaranBerhasil(request):
   return render(request, 'pendaftaranBerhasil.html')
 
-<<<<<<< HEAD
 def adminLogin(request):
-  return render(request, 'adminLogin.html')
+  return render(request, 'admin/adminLogin.html')
 
 def adminHome(request):
-  return render(request, 'adminHome.html')
-=======
+  return render(request, 'admin/adminHome.html')
+
 def adminArtikel(request):
   return render(request, 'admin/adminArtikel.html')
->>>>>>> b1c1f814263f5dd73c0e62540b23643d60ba0030
+
+def editJadwal(request):
+  return render(request, 'admin/editJadwal.html')

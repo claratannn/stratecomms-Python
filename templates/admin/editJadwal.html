@@ -1,0 +1,56 @@
+<!doctype html>
+{%extends "baseAdmin.html"%}
+
+{% load static %} 
+    
+    {% block head %} 
+    <link rel="stylesheet" href="{% static 'css/editJadwal.css' %}">
+    {% endblock %} 
+
+    {%block content%} 
+    
+    <div>
+        <h1>Informasi Jadwal Sertifikasi</h1>
+        <form class="form-horizontal" method='post' onSubmit={this.handleSubmit}>
+                <div class="row mb-3 text">
+                    <label class="control-label col-sm-2">Foto Poster</label>
+                        <div class="col-7">
+                            <input class="form-control" type="file" />
+                        </div>
+                </div>
+                <div class="row mb-3 text">
+                    <label class="control-label col-sm-2">Nama Judul </label>
+                    <div class="col-7">
+                            <input class="form-control" type="Nama Judul" />
+                    </div>
+                </div>
+                <div class="row mb-3 text">
+                    <label class="control-label col-sm-2">Link Ms.Teams </label>
+                    <div class="col-7">
+                            <input class="form-control"  type="Link"/>
+                        </div>
+                </div>
+            </form>
+            <div >
+              <p class="textDeksripsi"> Deskripsi </p>
+            </div>
+            <div class="row mb-3 deskripsiCard">
+                    <label class="control-label col-sm-2">Judul</label>
+                            <input class="col-7 deskripsiColumn"  type="Judul" />
+                    <label class="control-label col-sm-2">Judul</label>
+                            <input class="col-7 deskripsiColumn"  type="Judul" />
+
+            </div>
+      </div>
+
+
+    
+
+    {% endblock %} 
+
+
+    {%block scripts%} 
+
+    {% endblock %}
+
+</html>
