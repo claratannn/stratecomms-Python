@@ -29,3 +29,9 @@ def pendaftaranBerhasil(request):
 
 def adminArtikel(request):
   return render(request, 'admin/adminArtikel.html')
+
+def addArtikel(request):
+  return render(request, 'admin/addArtikel.html')
+
+def editArtikel(request):
+  return render(request, 'admin/editArtikel.html')

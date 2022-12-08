@@ -1,0 +1,67 @@
+.imgedit{
+    width: 160px !important;
+    height: 110px !important;
+}
+
+button{
+    border-style: dashed;
+}
+
+input[type=text], textarea{
+    width: 100%;
+}
+
+.row{
+    margin-top: 1%;
+}
+
+.jarak{
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.update{
+    background-image: linear-gradient(to right, rgba(195, 50, 40, 0.9), rgba(59, 23, 65, 0.9),rgba(21, 24, 87, 0.9),rgba(27, 120, 191, 0.9));
+    text-align: center;
+    color: #fff;
+    border-radius: 30px;
+    border-color: #fff !important;
+    font-weight: 700;
+    padding: 5px 15px;
+    margin-bottom: 12%;
+    /* height: 10%; */
+    width: 15%;
+    text-decoration: none;
+    font-size: 12pt;
+    min-width: 250px;
+  }
+
+  .btn {
+    border: 1px solid black;
+    color: black;
+    padding: 5px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 100px;
+    float: right;
+}
+
+.default {
+    border-color: black;
+    color: black !important;
+  }
+  
+  .default:hover {
+    border: 1px solid black;
+    background: #e7e7e7;
+    color: black !important;
+  }
+
+.container{
+    margin-bottom: 8%;
+}
+
+.buttonedit{
+    margin-left: 10px;
+    margin-top: 30px;
+}
