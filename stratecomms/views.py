@@ -14,3 +14,9 @@ def artikel(request):
 
 def isiArtikel(request):
   return render(request, 'isiArtikel.html')
+
+def pendaftaran(request):
+  return render(request, 'pendaftaran.html')
+
+def pendaftaranBerhasil(request):
+  return render(request, 'pendaftaranBerhasil.html')

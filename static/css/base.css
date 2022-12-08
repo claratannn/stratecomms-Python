@@ -33,7 +33,7 @@ li a {
   margin-right: 1vw;
   height: 5.5vh;
   display: inline-flex;
-  align-items: center; 
+  /* align-items: center;  */
   border-radius: 30px;
 } 
 
