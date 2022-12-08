@@ -1,10 +1,14 @@
 from django.shortcuts import render
 from .pages.pendaftaran import *
 
-def home(request):
-  return render(request, 'base.html')
-
 def homepage(request):
+  # cursor.execute('select * from peserta')
+  # data = cursor.fetchall()
+  # print(data)
+
+  # context = {
+  #   'data' : data
+  # }
   return render(request, 'homepage.html')
 
 def jadwalSertifikasi(request):
@@ -37,6 +41,12 @@ def adminHome(request):
 def adminArtikel(request):
   return render(request, 'admin/adminArtikel.html')
 
+def addArtikel(request):
+  return render(request, 'admin/addArtikel.html')
+
+def editArtikel(request):
+  return render(request, 'admin/editArtikel.html')
+
 def editJadwal(request):
   return render(request, 'admin/editJadwal.html')
 
@@ -45,3 +55,9 @@ def adminJadwal(request):
 
 def adminPortofolio(request):
   return render(request, 'admin/adminPortofolio.html')
+
+def addPortofolio(request):
+  return render(request, 'admin/addPortofolio.html')
+
+def editPortofolio(request):
+  return render(request, 'admin/editPortofolio.html')

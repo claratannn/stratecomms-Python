@@ -1,0 +1,63 @@
+<!doctype html>
+{% extends 'baseAdmin.html' %}
+
+{% load static %}
+    {% block head %}
+    <link rel="stylesheet" href="{% static 'css/addEditPortofolio.css' %}">
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    {% endblock %}
+    
+    {% block content %}
+    <div class="container">
+        <h4 class="jarak">Edit Informasi Portofolio</h4>
+        <div class="row">
+            <div class="col-2" style="text-align: end;">
+                Foto Artikel
+            </div>
+            <div class="col" style="float: right;">
+                <img class="imgedit rounded"src="{% static 'images/artikel.png'%}"/>
+                <input type="file">
+                    <!-- <button class="imgedit" type="file">
+                        <i data-feather="plus-square"></i><br>
+                        Tambahkan Foto
+                    </button> -->
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-2" style="text-align: end;">
+                Judul Artikel
+            </div>
+            <div class="col">
+                <input type="text">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-2" style="text-align: end;">
+                Deskripsi Artikel
+            </div>
+            <div class="col">
+                <textarea>
+                </textarea>
+            </div>
+        </div>
+
+        
+        <div style="color: black;">
+            <a type="button" class="btn btn-primary update buttonedit" style="text-decoration: none; width: 150px;" href="#">Update</a>
+            <a type="button" class="btn default buttonedit">Arsipkan</a>
+            <a type="button" class="btn default buttonedit">Kembali</a>
+        </div>
+    </div>
+
+    {% endblock %}
+
+    {% block scripts %}
+    
+    <script>
+      feather.replace()
+    </script>
+    {% endblock %}
+</html>
