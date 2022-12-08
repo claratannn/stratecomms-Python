@@ -26,3 +26,6 @@ pendaftaran
 
 def pendaftaranBerhasil(request):
   return render(request, 'pendaftaranBerhasil.html')
+
+def adminArtikel(request):
+  return render(request, 'admin/adminArtikel.html')
