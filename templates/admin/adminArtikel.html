@@ -28,10 +28,14 @@
               <div class="col-8 text-start">
                 <div>
                     <h3 class="fw-bold">{{a.judul}}</h3>
-                    <div class="text-truncate">
-                      {{a.isi}}
-                    </div>
-                    
+                    <p class="truncate" style="display: -webkit-box;
+                  -webkit-box-orient: vertical;
+                  -webkit-line-clamp: 3;
+                  overflow: hidden;">
+                    {{a.isi}}
+                  </p>
+                  <button type="submit" style="background-color: transparent; border: none; padding: 0; text-decoration: underline; color: blue;" name="button" value="{{a.ArtikelId}}">Read more...</button>
+
                 </div>
                     <h6 style="float: left; margin-top: 2%;">{{a.tanggal}}</h6>
                     <a type="button" class="btn btn-primary edit" style="text-decoration: none; float: right;" href="#">Edit</a>

@@ -11,7 +11,8 @@ def connect():
           user= "root",
           password= "admin123",
           database= "stratecomms",
-          auth_plugin='mysql_native_password')
+          auth_plugin='mysql_native_password'
+          )
       if connection.is_connected():
         return connection
 
