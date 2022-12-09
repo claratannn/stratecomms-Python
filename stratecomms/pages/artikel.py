@@ -9,8 +9,12 @@ def artikel(request):
   cursor.execute('select * from artikel')
   artikel = cursor.fetchall()
 
+  cursor.execute('select * from artikel where pin = "yes"')
+  topArtikel = cursor.fetchall()
+
   context = {
     'artikel' : artikel,
+    'topArtikel' : topArtikel,
   }
 
   if request.method == 'POST':

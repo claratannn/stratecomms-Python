@@ -12,53 +12,65 @@
     <div class="container">
         <h1>Informasi Jadwal Sertifikasi</h1>
         <br>
-        <form class="form-horizontal" method='post' onSubmit={this.handleSubmit}>
-                <div class="row mb-3 text">
-                    <label class="control-label col-sm-2">Foto Poster</label>
-                        <div class="col-7">
-                            <input class="form-control" type="file" />
-                        </div>
+        <div class="row mb-3 text">
+            <label class="control-label col-sm-2">Foto Poster</label>
+                <div class="col-7">
+                    <input class="form-control" type="file" />
                 </div>
-                <div class="row mb-3 text">
-                    <label class="control-label col-sm-2">Nama Judul </label>
-                    <div class="col-7">
-                            <input class="form-control" type="Nama Judul" />
-                    </div>
-                </div>
-                <div class="row mb-3 text">
-                    <label class="control-label col-sm-2">Link Ms.Teams </label>
-                    <div class="col-7">
-                            <input class="form-control"  type="Link"/>
-                        </div>
-                </div>
-            </form>
-            <br>
-        <h2 class="textDeksripsi"> Deskripsi <button class="btn default">+ Tambah Deskripsi</button></h2>
+        </div>
+        <div class="row mb-3 text">
+            <label class="control-label col-sm-2">Nama Judul </label>
+            <div class="col-7">
+                    <input class="form-control" type="Nama Judul" />
+            </div>
+            
+        <h1>Deskripsi</h1>
         <br>
-        <form class="form-horizontal tambah" method='post' onSubmit={this.handleSubmit}>
-            <div class="row mb-3 keterangan">
-                <label class="control-label col-sm-2 ">Judul </label>
-                <div class="col-9">
-                        <input class="form-control" type="Judul1"/>
+        <div class="row mb-3 text">
+            <label class="control-label col-sm-2">Nama Judul </label>
+            <div class="col-7">
+                    <input class="form-control" type="Nama Judul" />
+            </div>
+        </div>
+        <div class="row mb-3 text">
+            <label class="control-label col-sm-2">Link Ms.Teams </label>
+            <div class="col-7">
+                    <input class="form-control"  type="Link"/>
                 </div>
+        </div>
+        <div class="row mb-3 text">
+            <label class="control-label col-sm-2">Nama Judul </label>
+            <div class="col-7">
+                    <input class="form-control" type="Nama Judul" />
             </div>
-            <div class="row mb-3 keterangan">
-                <label class="control-label col-sm-2 ">Deskripsi </label>
-                <div class="col-9">
-                        <input class="form-control"  type="Deskripsi"/>
+        </div>
+        <div class="row mb-3 text">
+            <label class="control-label col-sm-2">Link Ms.Teams </label>
+            <div class="col-7">
+                    <input class="form-control"  type="Link"/>
                 </div>
+        </div>
+        <div class="row mb-3 text">
+            <label class="control-label col-sm-2">Nama Judul </label>
+            <div class="col-7">
+                    <input class="form-control" type="Nama Judul" />
             </div>
-        </form>
-        <br>
-        <div class="confirm" style="display: flex;">
-            <button class="tombolakhir" style="margin-right: 10px" href="/adminJadwal">Kembali</button>
-            <button class="tombolakhir" style="margin-right: 10px" href="/adminJadwal">Arsipkan</button>
-            <button class="update" style="margin-right: 10px" href="/adminJadwal">Update</button>
-            </div>
-
+        </div>
+        <div class="row mb-3 text">
+            <label class="control-label col-sm-2">Link Ms.Teams </label>
+            <div class="col-7">
+                    <input class="form-control"  type="Link"/>
+                </div>
+        </div>
     </div>
 
-    
+    <br>
+    <div class="button-container confirm" style="display: flex;">
+        <button class="tombolakhir" style="margin-right: 10px" href="/adminJadwal">Kembali</button>
+        <button class="tombolakhir" style="margin-right: 10px" href="/adminJadwal">Arsipkan</button>
+        <button class="update" style="margin-right: 10px" href="/adminJadwal">Update</button>
+    </div>
+    <br>
 
     {% endblock %} 
 

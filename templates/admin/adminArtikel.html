@@ -55,11 +55,24 @@
                         overflow: hidden;">
                         {{a.isi}}
                       </p>
-                      <button type="submit" style="background-color: transparent; border: none; padding: 0; text-decoration: underline; color: blue;" name="button" value="{{a.ArtikelId}}">Read more...</button>
+                      <!-- <button type="submit" style="background-color: transparent; border: none; padding: 0; text-decoration: underline; color: blue;" name="button" value="{{a.ArtikelId}}">Read more...</button> -->
                     </div>
                       <h6 style="float: left; margin-top: 2%;">{{a.tanggal}}</h6>
                       <a type="button" class="btn btn-primary edit" style="text-decoration: none; float: right;" href="#">Edit</a>
                       <button data-bs-toggle="modal" data-bs-target="#modal-{{a.ArtikelId}}" type="button" class="btn btn-primary edit" style="text-decoration: none; float: right; color: white; margin-right: 1vw;">Delete</button>
+                      <button name="button" 
+                      {% if a.pin == 'yes' %}
+                        value="unpin-{{a.ArtikelId}}" 
+                      {% else %}
+                        value="pin-{{a.ArtikelId}}" 
+                      {% endif %}
+                      type="submit" class="btn btn-primary edit" style="text-decoration: none; float: right; color: white; margin-right: 1vw;">
+                        {% if a.pin == 'yes' %}
+                        Remove from Top Article
+                        {% else %}
+                        Add To Top Article
+                        {% endif %}
+                      </button>
                   </div>
               </div>
             </div>
@@ -77,7 +90,7 @@
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button name="button" value="{{a.ArtikelId}}" type="submit" class="btn btn-primary">Delete</button>
+                    <button name="button" value="delete-{{a.ArtikelId}}" type="submit" class="btn btn-primary">Delete</button>
                   </div>
                 </div>
               </div>
