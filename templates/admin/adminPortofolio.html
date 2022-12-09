@@ -15,7 +15,9 @@
       </form> -->
       <div class="jarak">
         <div class="container">
-          <h4 class="fw-bold">Portofolio <button class="btn default">+ New</button></h4>
+          <a href="{% url 'addPortofolio' %}">
+            <h4 class="fw-bold">Portofolio <button class="btn default">+ New</button></h4>
+          </a>
           <div class="jarak">
             <div class="row">
                 <div class="col colangka">
@@ -31,7 +33,7 @@
                     
                 </div>
                     <h6 style="float: left; margin-top: 2%;">31/12/2021, 13:53 WIB</h6>
-                    <a type="button" class="btn btn-primary edit" style="text-decoration: none; float: right;" href="#">Edit</a>
+                    <a type="button" class="btn btn-primary edit" style="text-decoration: none; float: right;" href="{% url 'editPortofolio' %}">Edit</a>
                 
               </div>
             </div>

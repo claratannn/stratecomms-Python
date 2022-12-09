@@ -9,13 +9,10 @@
     {% endblock %}
     
     {% block content %}
-    <!-- <form action="">
-        <input type="text" name='testing' />
-        <button type='submit' ></button>
-      </form> -->
       <div class="jarak">
         <div class="container">
-          <h4 class="fw-bold">Artikel <button class="btn default">+ New</button></h4>
+          
+          <a href="{% url 'addArtikel' %}"><h4 class="fw-bold">Artikel <button class="btn default">+ New</button></h4></a>
           <div class="jarak">
             {% for a in artikel %}
             <div class="row">
@@ -34,7 +31,7 @@
                     
                 </div>
                     <h6 style="float: left; margin-top: 2%;">{{a.tanggal}}</h6>
-                    <a type="button" class="btn btn-primary edit" style="text-decoration: none; float: right;" href="#">Edit</a>
+                    <a type="button" class="btn btn-primary edit" style="text-decoration: none; float: right;" href="{% url 'editArtikel' %}">Edit</a>
                 
               </div>
             </div>
