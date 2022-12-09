@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .pages.pendaftaran import *
+from .pages.artikel import *
 from .pages.admin.login import *
 from .pages.admin.isiArtikel import *
 from .pages.admin.adminArtikel import *
@@ -19,8 +20,7 @@ def homepage(request):
 def jadwalSertifikasi(request):
   return render(request,'jadwalSertifikasi.html')
 
-def artikel(request):
-  return render(request, 'artikel.html')
+artikel
 
 isiArtikel
 
