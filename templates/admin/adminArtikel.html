@@ -9,12 +9,30 @@
     {% endblock %}
     
     {% block content %}
-    <!-- <form action="">
-        <input type="text" name='testing' />
-        <button type='submit' ></button>
-      </form> -->
       <div class="jarak">
         <div class="container">
+          
+          <a href="{% url 'addArtikel' %}"><h4 class="fw-bold">Artikel <button class="btn default">+ New</button></h4></a>
+          <div class="jarak">
+            {% for a in artikel %}
+            <div class="row">
+                <div class="col colangka">
+                    {{a.ArtikelId}}
+                </div>
+              <div class="col-3">
+                <img src="../../static/images/artikel/{{a.foto}}"/>
+              </div>
+              <div class="col-8 text-start">
+                <div>
+                    <h3 class="fw-bold">{{a.judul}}</h3>
+                    <div class="text-truncate">
+                      {{a.isi}}
+                    </div>
+                    
+                </div>
+                    <h6 style="float: left; margin-top: 2%;">{{a.tanggal}}</h6>
+                    <a type="button" class="btn btn-primary edit" style="text-decoration: none; float: right;" href="{% url 'editArtikel' %}">Edit</a>
+                
           <a href="{% url 'addArtikel' %}" ><h4 class="fw-bold">Artikel <button class="btn default">+ New</button></h4></a>
           <br>
           <form action="" method="POST">

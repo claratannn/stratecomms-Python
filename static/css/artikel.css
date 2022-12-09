@@ -51,6 +51,13 @@ u{
     text-decoration: underline; 
     color: blue;
 }
+<<<<<<< HEAD
+
+h3 {
+    color: blue !important;
+}
+=======
+>>>>>>> 3ec1088da637a3cd941205e9de41e2e9dd7fec4f
 
 .truncate {
         display: -webkit-box;

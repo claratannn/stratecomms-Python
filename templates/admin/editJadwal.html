@@ -9,73 +9,66 @@
 
     {%block content%} 
     
-    <div class="container">
+    <div class="container" id="UpdateAdmin" method="POST">
         <h1>Informasi Jadwal Sertifikasi</h1>
         <br>
         <div class="row mb-3 text">
             <label class="control-label col-sm-2">Foto Poster</label>
                 <div class="col-7">
-                    <input class="form-control" type="file" />
+                    <input class="form-control" type="file" name="fotoPoster" id="fotoPoster"/>
                 </div>
         </div>
         <div class="row mb-3 text">
             <label class="control-label col-sm-2">Nama Judul </label>
             <div class="col-7">
-                    <input class="form-control" type="Nama Judul" />
+                    <input class="form-control" type="text" name="updateTitle" id="updateTitle"/>
             </div>
-        </div>
-        <div class="row mb-3 text">
-            <label class="control-label col-sm-2">Link Ms.Teams </label>
-            <div class="col-7">
-                    <input class="form-control"  type="Link"/>
-                </div>
-        </div>
 
         <h1>Deskripsi</h1>
         <br>
         <div class="row mb-3 text">
-            <label class="control-label col-sm-2">Nama Judul </label>
+            <label class="control-label col-sm-2">Judul Deskripsi 1</label>
             <div class="col-7">
-                    <input class="form-control" type="Nama Judul" />
+                    <input class="form-control" type="text" name="updateJudul1" id="updateJudul1" />
             </div>
         </div>
         <div class="row mb-3 text">
-            <label class="control-label col-sm-2">Link Ms.Teams </label>
+            <label class="control-label col-sm-2">Isi Deskripsi 1</label>
             <div class="col-7">
-                    <input class="form-control"  type="Link"/>
+                    <input class="form-control"  type="text" name="updateDeskripsi1" id="updateDeskripsi1"/>
                 </div>
         </div>
         <div class="row mb-3 text">
-            <label class="control-label col-sm-2">Nama Judul </label>
+            <label class="control-label col-sm-2">Judul Deskripsi 2</label>
             <div class="col-7">
-                    <input class="form-control" type="Nama Judul" />
+                    <input class="form-control" type="text" name="updateJudul2" id="updateJudul2"/>
             </div>
         </div>
         <div class="row mb-3 text">
-            <label class="control-label col-sm-2">Link Ms.Teams </label>
+            <label class="control-label col-sm-2">Isi Deskripsi 2</label>
             <div class="col-7">
-                    <input class="form-control"  type="Link"/>
+                    <input class="form-control"  type="text" name="updateDeskripsi2" id="updateDeskripsi2"/>
                 </div>
         </div>
         <div class="row mb-3 text">
-            <label class="control-label col-sm-2">Nama Judul </label>
+            <label class="control-label col-sm-2">Judul Deskripsi 3</label>
             <div class="col-7">
-                    <input class="form-control" type="Nama Judul" />
+                    <input class="form-control" type="text" name="updateJudul3" id="updateJudul3"/>
             </div>
         </div>
         <div class="row mb-3 text">
-            <label class="control-label col-sm-2">Link Ms.Teams </label>
+            <label class="control-label col-sm-2">Isi Deskripsi 3</label>
             <div class="col-7">
-                    <input class="form-control"  type="Link"/>
+                    <input class="form-control"  type="text" name="updateDeskripsi3" id="updateDeskripsi3"/>
                 </div>
         </div>
-    </div>
+    </div> 
 
     <br>
     <div class="button-container confirm" style="display: flex;">
         <button class="tombolakhir" style="margin-right: 10px" href="/adminJadwal">Kembali</button>
         <button class="tombolakhir" style="margin-right: 10px" href="/adminJadwal">Arsipkan</button>
-        <button class="update" style="margin-right: 10px" href="/adminJadwal">Update</button>
+        <button name="button" value="UpdateAdminPorto-0" class="update" style="margin-right: 10px">Update</button>
     </div>
     <br>
 
