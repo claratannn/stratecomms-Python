@@ -9,13 +9,10 @@ def connect():
           host= "127.0.0.1",
           port= '3306',
           user= "root",
-<<<<<<< HEAD
           password= "admin123",
-=======
-          password= "PkmOba_2022",
->>>>>>> 52bf5e3a49e1dd8a3652ea846432ddbd24817250
           database= "stratecomms",
-          auth_plugin='mysql_native_password')
+          auth_plugin='mysql_native_password'
+          )
       if connection.is_connected():
         return connection
 
