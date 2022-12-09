@@ -7,6 +7,9 @@ from .pages.admin.adminArtikel import *
 from .pages.admin.addArtikel import *
 from datetime import datetime
 
+connection = connect()
+cursor = connection.cursor(dictionary= True)
+
 def homepage(request):
   # now = datetime.now()
   # dt_string = now.strftime("%d %B %Y, %H:%M:%S")
@@ -19,7 +22,46 @@ def homepage(request):
   return render(request, 'homepage.html')
 
 def jadwalSertifikasi(request):
-  return render(request,'jadwalSertifikasi.html')
+  cursor.execute('select * from jadwal')
+  jadwalSertifikasi = cursor.fetchone()
+  syarat = jadwalSertifikasi['deskripsi3'].split('-')
+
+  context = {
+    'jadwalSertifikasi' : jadwalSertifikasi,
+    'syarat' : syarat,
+  }
+
+  if request.method == "POST":
+    # try:
+    #   fotoPoster = request.FILES['fotoPoster']
+    #   fs = FileSystemStorage(location='static/images/jadwal')
+    #   fs.save(fotoPoster.name, fotoPoster)
+    # except:
+    #   messages.info(request, 'MOHON UNTUK MENGISI KOLOM FOTO')
+    #   return render(request, 'admin/editJadwal.html')
+      
+    # updateTitle = request.POST.get('updateTitle')
+    # updateJudul1 = request.POST.get('updateJudul1')
+    # updateDeskripsi1 = request.POST.get('updateDeskripsi1')
+    # updateJudul2 = request.POST.get('updateJudul2')
+    # updateDeskripsi2 = request.POST.get('updateDeskripsi2')
+    # updateJudul3 = request.POST.get('updateJudul3')
+    # updateDeskripsi3 = request.POST.get('updateDeskripsi3')
+    # button = request.POST.get('button')
+
+    # button = button.split('-')
+    # if button[0] == 'UpdateAdminPorto':
+    #   cursor.execute(f'update portofolio set fotoPoster = "{fotoPoster}",updateTitle = "{updateTitle}", updateJudul1 = "{updateJudul1}", updateJudul2 = "{updateJudul2}", updateJudul3 = "{updateJudul3}", updateDeskripsi1 = "{updateDeskripsi1}", updateDeskripsi2 = "{updateDeskripsi2}", updateDeskripsi3 = "{updateDeskripsi3}" where PortofolioID = "{PortofolioId}"')
+
+    cursor.execute('select * from jadwal')
+    jadwalSertifikasi = cursor.fetchone()
+
+    context = {
+      'jadwalSertifikasi' : jadwalSertifikasi,
+      'syarat' : syarat,
+    }
+
+  return render(request,'jadwalSertifikasi.html', context)
 
 artikel
 
@@ -50,31 +92,114 @@ def editArtikel(request):
   return render(request, 'admin/editArtikel.html')
 
 def editJadwal(request):
-  connection = connect()
-  cursor = connection.cursor(dictionary= True)
-  cursor.execute('select * from portofolio')
-  data = cursor.fetchall()
+  cursor.execute('select * from jadwal where JadwalId=1')
+  jadwalSertifikasi = cursor.fetchone()
+  syarat = jadwalSertifikasi['deskripsi3'].split('-')
+
+  context = {
+    'jadwalSertifikasi' : jadwalSertifikasi,
+    'syarat' : syarat,
+  }
 
   if request.method == "POST":
-    fotoPoster = request.POST.get('fotoPoster')
+    try:
+      fotoPoster = request.FILES['fotoPoster']
+      fs = FileSystemStorage(location='static/images/jadwal')
+      fs.save(fotoPoster.name, fotoPoster)
+    except:
+      messages.info(request, 'MOHON UNTUK MENGISI KOLOM FOTO')
+      return render(request, 'admin/editJadwal.html')
+      
     updateTitle = request.POST.get('updateTitle')
+    if updateTitle == '':
+      messages.info(request, 'MOHON UNTUK MENGISI KOLOM JUDUL UTAMA')
+      return render(request, 'admin/editJadwal.html')
+
     updateJudul1 = request.POST.get('updateJudul1')
+    if updateTitle == '':
+      messages.info(request, 'MOHON UNTUK MENGISI KOLOM JUDUL 1')
+      return render(request, 'admin/editJadwal.html')
+
     updateDeskripsi1 = request.POST.get('updateDeskripsi1')
+    if updateDeskripsi1 == '':
+      messages.info(request, 'MOHON UNTUK MENGISI KOLOM DESKRIPSI 1')
+      return render(request, 'admin/editJadwal.html')
+    
+
     updateJudul2 = request.POST.get('updateJudul2')
+    if updateJudul2 == '':
+      updateJudul2 = 'none'
+    
     updateDeskripsi2 = request.POST.get('updateDeskripsi2')
+    if updateDeskripsi2 == '':
+      updateDeskripsi2 = 'none'
+
     updateJudul3 = request.POST.get('updateJudul3')
+    if updateJudul3 == '':
+      updateJudul3 = 'none'
+
     updateDeskripsi3 = request.POST.get('updateDeskripsi3')
-    button = request.POST.get('button')
+    if updateDeskripsi3 == '':
+      updateDeskripsi3 = 'none'
 
-    button = button.split('-')
-    if button[0] == 'UpdateAdminPorto':
-      cursor.execute(f'update portofolio set fotoPoster = "{fotoPoster}",updateTitle = "{updateTitle}", updateJudul1 = "{updateJudul1}", updateJudul2 = "{updateJudul2}", updateJudul3 = "{updateJudul3}", updateDeskripsi1 = "{updateDeskripsi1}", updateDeskripsi2 = "{updateDeskripsi2}", updateDeskripsi3 = "{updateDeskripsi3}" where PortofolioID = "{PortofolioId}"')
+    cursor.execute(f'update jadwal set gambar = "{fotoPoster}",judul = "{updateTitle}", judul1 = "{updateJudul1}", judul2 = "{updateJudul2}", judul3 = "{updateJudul3}", deskripsi1 = "{updateDeskripsi1}", deskripsi2 = "{updateDeskripsi2}", deskripsi3 = "{updateDeskripsi3}" where JadwalId = 1')
+    connection.commit()
 
-  return render(request, 'admin/editJadwal.html')
+    cursor.execute('select * from jadwal')
+    jadwalSertifikasi = cursor.fetchone()
+    syarat = jadwalSertifikasi['deskripsi3'].split('-')
+
+    context = {
+      'jadwalSertifikasi' : jadwalSertifikasi,
+      'syarat' : syarat,
+    }
+
+  return render(request, 'admin/editJadwal.html', context)
 
 
 def adminJadwal(request):
-  return render(request, 'admin/adminJadwal.html')
+  cursor.execute('select * from jadwal')
+  jadwalSertifikasi = cursor.fetchone()
+  syarat = jadwalSertifikasi['deskripsi3'].split('-')
+
+  context = {
+    'jadwalSertifikasi' : jadwalSertifikasi,
+    'syarat' : syarat,
+  }
+
+  if request.method == "POST":
+    # try:
+    #   fotoPoster = request.FILES['fotoPoster']
+    #   fs = FileSystemStorage(location='static/images/jadwal')
+    #   fs.save(fotoPoster.name, fotoPoster)
+    # except:
+    #   messages.info(request, 'MOHON UNTUK MENGISI KOLOM FOTO')
+    #   return render(request, 'admin/editJadwal.html')
+      
+    # updateTitle = request.POST.get('updateTitle')
+    # updateJudul1 = request.POST.get('updateJudul1')
+    # updateDeskripsi1 = request.POST.get('updateDeskripsi1')
+    # updateJudul2 = request.POST.get('updateJudul2')
+    # updateDeskripsi2 = request.POST.get('updateDeskripsi2')
+    # updateJudul3 = request.POST.get('updateJudul3')
+    # updateDeskripsi3 = request.POST.get('updateDeskripsi3')
+    # button = request.POST.get('button')
+
+    # button = button.split('-')
+    # if button[0] == 'UpdateAdminPorto':
+    #   cursor.execute(f'update portofolio set fotoPoster = "{fotoPoster}",updateTitle = "{updateTitle}", updateJudul1 = "{updateJudul1}", updateJudul2 = "{updateJudul2}", updateJudul3 = "{updateJudul3}", updateDeskripsi1 = "{updateDeskripsi1}", updateDeskripsi2 = "{updateDeskripsi2}", updateDeskripsi3 = "{updateDeskripsi3}" where PortofolioID = "{PortofolioId}"')
+
+    cursor.execute('select * from jadwal')
+    jadwalSertifikasi = cursor.fetchone()
+    syarat = jadwalSertifikasi['deskripsi3'].split('-')
+
+
+    context = {
+      'jadwalSertifikasi' : jadwalSertifikasi,
+      'syarat' : syarat,
+    }
+
+  return render(request, 'admin/adminJadwal.html', context)
 
 def adminPortofolio(request):
   return render(request, 'admin/adminPortofolio.html')

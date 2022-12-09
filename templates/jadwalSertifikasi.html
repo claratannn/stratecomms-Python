@@ -21,30 +21,28 @@
     </div>
     <div class="row">
         <div class="col-sm-5">
-            <img class="flyer" src="{% static 'images/jadwal.png' %}"alt="flyer" />
+            <img class="flyer" src="../static/images/jadwal/{{jadwalSertifikasi.gambar}}" alt="flyer" />
         </div>
         <div class="col-sm-7" >
         <div class="jrk">
             <div clas="isi">
-            <div class="row" style="margin-Bottom: 20px;">
-                <b class="juduljadwal">Sertifikasi Profesi Public Relations</b></div>
-            <div class="row" style="font-size: 24p; margin-Bottom: 10px;">
-                <b class="subjuduljadwal" >Workshop</b></div>
-            <div class="row" style="margin-Bottom: 20px;">
-                <b class="jadwal" >Selasa, 6 September 2022</b></div>
-            <div class="row" style="font-Size: 24px; margin-Bottom: 10px;">
-                <b class="subjuduljadwal" >Uji Kompetensi</b></div>
-            <div class="row" style="margin-Bottom: 20px;">
-                <b class="jadwal" >Sabtu, 10 September 2022</b></div>
-            <div class="row" style="font-Size: 24px; margin-Bottom: 10px;">
-                <b class="subjuduljadwal" >Syarat Pendaftaran</b></div>
-            <div class="row" style="margin-Bottom: 20px;">
-            <ul>
-                <li class="jadwal" >1 Foto cetak 3x4 sebanyak 5 lembar</li>
-                <li class="jadwal" >Curriculum Vitae (CV)</li>
-                <li class="jadwal" >Scan Ijazah pendidikan terakhir</li>
-                <li class="jadwal" >Scan Kartu Tanda Penduduk (KTP)</li>
-            </ul>
+                <div class="row" style="margin-Bottom: 20px;">
+                    <b class="juduljadwal">{{jadwalSertifikasi.judul}}</b></div>
+                <div class="row" style="font-size: 24px; margin-Bottom: 10px;">
+                    <b class="subjuduljadwal" >{{jadwalSertifikasi.judul1}}</b></div>
+                <div class="row" style="margin-Bottom: 24px;">
+                    <b class="jadwal" >{{jadwalSertifikasi.deskripsi1}}</b></div>
+                <div class="row" style="font-Size: 24px; margin-Bottom: 10px;">
+                    <b class="subjuduljadwal" >{{jadwalSertifikasi.judul2}}</b></div>
+                <div class="row" style="margin-Bottom: 20px;">
+                    <b class="jadwal" >{{jadwalSertifikasi.deskripsi2}}</b></div>
+                <div class="row" style="font-Size: 24px; margin-Bottom: 10px;">
+                    <b class="subjuduljadwal" >{{jadwalSertifikasi.judul3}}</b></div>
+                    <ul>
+                        {% for s in syarat %}
+                            <li>{{s}}</li>
+                        {% endfor %}
+                    </ul> 
             </div>
             <button class="daftar"><a style="text-Decoration: none; font-Size: 20pt" href="/Pendaftaran"><b>Daftar</b></a></button>
             </div>
