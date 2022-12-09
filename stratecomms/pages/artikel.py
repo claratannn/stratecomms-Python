@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from datetime import datetime
 from ..databaseConnect import *
 
@@ -12,5 +12,10 @@ def artikel(request):
   context = {
     'artikel' : artikel,
   }
+
+  if request.method == 'POST':
+    button = request.POST.get('button')
+    if button != '' or button != None:
+      return redirect('isiArtikel', pk=button)  
 
   return render(request, 'artikel.html', context)
