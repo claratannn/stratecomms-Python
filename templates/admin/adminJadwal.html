@@ -6,6 +6,22 @@
 {%block head%} 
 <link rel="stylesheet" href="{% static 'css/adminjadwal.css' %}">
 
+<style>
+    ul {
+        list-style: none; /* Remove default bullets */
+        padding: 0 !important;
+    }
+
+    ul li::before {
+        content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        color: black; /* Change the color */
+        font-weight: bold; /* If you want it to be bold */
+        display: inline-block; /* Needed to add space between the bullet and the text */
+        width: 1em; /* Also needed for space (tweak if needed) */
+        margin-left: -1em; /* Also needed for space (tweak if needed) */
+    }
+</style>
+
 {% endblock %} 
 {%block content%} 
 <div class="container">
@@ -27,7 +43,7 @@
             <div clas="isi">
             <div class="row" style="margin-Bottom: 20px;">
                 <b class="juduljadwal">Sertifikasi Profesi Public Relations</b></div>
-            <div class="row" style="font-size: 24p; margin-Bottom: 10px;">
+            <div class="row" style="font-size: 24px; margin-Bottom: 10px;">
                 <b class="subjuduljadwal" >Workshop</b></div>
             <div class="row" style="margin-Bottom: 20px;">
                 <b class="jadwal" >Selasa, 6 September 2022</b></div>
@@ -37,14 +53,10 @@
                 <b class="jadwal" >Sabtu, 10 September 2022</b></div>
             <div class="row" style="font-Size: 24px; margin-Bottom: 10px;">
                 <b class="subjuduljadwal" >Syarat Pendaftaran</b></div>
-            <div class="row" style="margin-Bottom: 20px;">
-            <ul>
-                <li class="jadwal" >1 Foto cetak 3x4 sebanyak 5 lembar</li>
-                <li class="jadwal" >Curriculum Vitae (CV)</li>
-                <li class="jadwal" >Scan Ijazah pendidikan terakhir</li>
-                <li class="jadwal" >Scan Kartu Tanda Penduduk (KTP)</li>
-            </ul>
-            </div>
+                <ul>
+                    <li>Gadgets</li>
+                    <li>Accessories</li>
+                </ul>        
             <button class="daftar"><a style="text-Decoration: none; font-Size: 20pt" href="/editJadwal"><b>Edit</b></a></button>
             </div>
             </div>

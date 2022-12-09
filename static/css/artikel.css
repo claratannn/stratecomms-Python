@@ -51,18 +51,10 @@ u{
     text-decoration: underline; 
     color: blue;
 }
-<<<<<<< HEAD
-=======
-
-h3 {
-    color: blue !important;
-}
 
 .truncate {
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 3;
         overflow: hidden;
-        background-color: yellow
      }
->>>>>>> 5d90c3d3d6002f49f8637055ef938dd0c0f1b35c
