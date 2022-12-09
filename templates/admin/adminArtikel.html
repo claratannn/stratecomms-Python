@@ -17,12 +17,13 @@
         <div class="container">
           <h4 class="fw-bold">Artikel <button class="btn default">+ New</button></h4>
           <div class="jarak">
+            {% for a in artikel %}
             <div class="row">
                 <div class="col colangka">
-                    1.
+                    {{a.ArtikelId}}
                 </div>
               <div class="col-3">
-                <img src="{% static 'images/artikel.png'%}"/>
+                <img src="" src="{% static 'images/artikel.png'%}"/>
               </div>
               <div class="col-8 text-start">
                 <div>
@@ -36,6 +37,7 @@
               </div>
             </div>
           </div>
+          {% endfor %}
 
           
           <div style="margin-top: -85px;">
