@@ -29,7 +29,9 @@ urlpatterns = [
     path('adminHome/', views.adminHome, name='adminHome'),
     path('adminArtikel/', views.adminArtikel, name='adminArtikel'),
     path('adminJadwal/', views.adminJadwal, name='adminJadwal'),
+    path('editJadwal/', views.editJadwal, name='editJadwal'),
     path('adminPortofolio/', views.adminPortofolio, name='adminPortofolio'),
     path('portofolio/', views.portofolio, name='portofolio'),
     path('isiPortofolio/', views.isiPortofolio, name='isiPortofolio'),
+
 ]

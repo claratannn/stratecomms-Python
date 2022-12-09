@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+body {
+  max-width: 100%;
+}
+
+a {
+  color:  white !important;
+}
+
+li {
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+  list-style: none;
+}
+
+li a {
+  text-align: center;
+}
+
+.navbarStyle {
+  height: 9vh;
+}
+
+.aFontStyle {
+  font-weight: 500;
+}
+
+.buttonPendaftaran {
+  background-image: linear-gradient(to right, rgba(195, 50, 40, 1), rgba(59, 23, 65, 1),rgba(21, 24, 87, 1),rgba(27, 120, 191, 1));
+  margin-left: 1vw;
+  margin-right: 1vw;
+  height: 5.5vh;
+  display: inline-flex;
+  /* align-items: center;  */
+  border-radius: 30px;
+} 
+
+.buttonPendaftaran:hover{
+  background-image: linear-gradient(to right, rgba(148, 37, 29, 0.7), rgba(59, 23, 65, 0.7),rgba(21, 24, 87, 0.7),rgba(27, 120, 191, 0.7));
+}
+
+.navbarActive {
+  background: -webkit-linear-gradient(right, rgba(195, 50, 40, 0.9),rgba(27, 120, 191, 0.9));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+li:hover {
+  background: -webkit-linear-gradient(right, rgba(195, 50, 40, 0.9),rgba(27, 120, 191, 0.9));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.footerBody {
+  background-color: black;
+  height: auto;
+  text-align: center;
+  margin-top: 3vw;
+}
+
+.footerh1{
+  color: white;
+  text-align: center;
+  padding-top: 3vw;
+  font-size: 29px;
+  font-weight: 1000;
+  font-family: 'Poppins';
+  padding-bottom: 3vw;
+  width: 100vw;
+}
+
+.footerh4 {
+  color: white;
+  text-align: center;
+  font-weight: 1000;
+  font-family: 'Poppins';
+  padding-bottom: 1.5vw;
+  font-size: 20px;
+}
+
+.footerButton {
+  font-family: 'Poppins';
+  font-weight: 1000;
+  text-align: center;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  margin-top: 1.7vw;
+  margin-bottom: 2.7vw;
+  border-radius: 7px;
+  width: 13vw;
+  height: 3.5vw;
+}
