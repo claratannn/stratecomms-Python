@@ -4,6 +4,7 @@ from .pages.artikel import *
 from .pages.admin.login import *
 from .pages.admin.isiArtikel import *
 from .pages.admin.adminArtikel import *
+from .pages.admin.addArtikel import *
 from datetime import datetime
 
 def homepage(request):
@@ -43,8 +44,7 @@ def adminHome(request):
 
 adminArtikel
 
-def addArtikel(request):
-  return render(request, 'admin/addArtikel.html')
+addArtikel
 
 def editArtikel(request):
   return render(request, 'admin/editArtikel.html')

@@ -33,10 +33,57 @@
                     <h6 style="float: left; margin-top: 2%;">{{a.tanggal}}</h6>
                     <a type="button" class="btn btn-primary edit" style="text-decoration: none; float: right;" href="{% url 'editArtikel' %}">Edit</a>
                 
+          <a href="{% url 'addArtikel' %}" ><h4 class="fw-bold">Artikel <button class="btn default">+ New</button></h4></a>
+          <br>
+          <form action="" method="POST">
+            {% csrf_token %}
+              {% for a in artikel %}
+              <div>
+                <div class="row">
+                    <div class="col colangka">
+                        {{a.ArtikelId}}
+                    </div>
+                  <div class="col-3">
+                    <img src="../../static/images/artikel/{{a.foto}}"/>
+                  </div>
+                  <div class="col-8 text-start">
+                    <div>
+                        <h3 class="fw-bold">{{a.judul}}</h3>
+                        <p class="truncate" style="display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 3;
+                        overflow: hidden;">
+                        {{a.isi}}
+                      </p>
+                      <button type="submit" style="background-color: transparent; border: none; padding: 0; text-decoration: underline; color: blue;" name="button" value="{{a.ArtikelId}}">Read more...</button>
+                    </div>
+                      <h6 style="float: left; margin-top: 2%;">{{a.tanggal}}</h6>
+                      <a type="button" class="btn btn-primary edit" style="text-decoration: none; float: right;" href="#">Edit</a>
+                      <button data-bs-toggle="modal" data-bs-target="#modal-{{a.ArtikelId}}" type="button" class="btn btn-primary edit" style="text-decoration: none; float: right; color: white; margin-right: 1vw;">Delete</button>
+                  </div>
               </div>
             </div>
-          </div>
-          {% endfor %}
+
+            <!-- Modal -->
+            <div class="modal fade" id="modal-{{a.ArtikelId}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered  ">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Delete This Artikel?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body" style="text-align: center;">
+                    {{a.judul}}
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button name="button" value="{{a.ArtikelId}}" type="submit" class="btn btn-primary">Delete</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </form>
 
         </div> 
       </div>

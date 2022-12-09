@@ -55,3 +55,11 @@ u{
 h3 {
     color: blue !important;
 }
+
+.truncate {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        background-color: yellow
+     }
