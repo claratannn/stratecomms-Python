@@ -66,7 +66,7 @@
                   overflow: hidden;">
                     {{a.isi}}
                   </p>
-                  <button type="submit" style="background-color: transparent; border: none; padding: 0; text-decoration: underline; color: blue;" name="button" value="{{a.ArtikelId}}">Read more...</button>
+                  <a style="color: blue !important;" href="{% url 'isiArtikel' pk=a.ArtikelId %}">See more...</a>
                   <div class="garishr">{{a.tanggal}}</div>
               </div>
             </div>

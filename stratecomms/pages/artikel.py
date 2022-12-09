@@ -15,6 +15,7 @@ def artikel(request):
 
   if request.method == 'POST':
     button = request.POST.get('button')
+    print(button)
     if button != '' or button != None:
       return redirect('isiArtikel', pk=button)  
 
