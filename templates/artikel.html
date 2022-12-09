@@ -11,34 +11,22 @@
 
     <div class="jarak2">
         <div class="container">
-            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner widthcarousel">
+                  {% for artikel in topArtikel %}
                   <div class="carousel-item active" >
-                    <img src="{% static 'images/artikel1.png' %}" class="d-block" alt="..." style="margin:auto !important; height: 84vh;">
+                    <img src="../static/images/artikel/{{artikel.foto}}" class="d-block" alt="..." style="margin:auto !important; height: 84vh;">
                     <div class="carousel-caption d-none d-md-block textcolor">
-                      <h5>TOP ARTICLE</h5>
-                      <p>Some representative placeholder content for the first slide.</p>
+                      <h5 style="color: white !important; font-size: 30px !important;">TOP ARTICLE</h5>
+                      <p style="color: white !important; font-size: 25px; max-width: 80%; margin: auto;">{{artikel.judul}}</p>
                     </div>
                   </div>
-                  <div class="carousel-item">
-                    <img src="{% static 'images/artikel2.png' %}" class="d-block" alt="..." style="margin:auto !important; height: 84vh;">
-                    <div class="carousel-caption d-none d-md-block textcolor">
-                      <h5>TOP ARTICLE</h5>
-                      <p>Some representative placeholder content for the second slide.</p>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="{% static 'images/artikel3.png' %}" class="d-block" alt="..." style="margin:auto !important; height: 84vh;">
-                    <div class="carousel-caption d-none d-md-block textcolor">
-                      <h5>TOP ARTICLE</h5>
-                      <p>Some representative placeholder content for the third slide.</p>
-                    </div>
-                  </div>
+                  {% endfor %}
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -48,25 +36,32 @@
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
                 </button>
-            </div>
-        
-        {% for a in artikel %}
-        <div class="jarak1">
-          <div class="row">
-          <div class="col-4">
-            <img src=".././static/images/artikel/{{a.foto}}"/>
           </div>
-          <div class="col-8 text-start">
-              <h3 class="fw-bold">{{a.judul}}</h3>
-              <div class="text-truncate">
-                {{a.isi}}
+
+          <form action="" method="POST">
+            {% csrf_token %}
+            {% for a in artikel %}
+            <div class="jarak1">
+              <div class="row">
+              <div class="col-4" style="text-align: center;">
+                <img style="max-width: 440px; max-height: 269px;" src=".././static/images/artikel/{{a.foto}}"/>
               </div>
-              
-              <div class="garishr">{{a.tanggal}}</div>
+              <div class="col-8 text-start">
+                  <h3 class="fw-bold">{{a.judul}}</h3>
+                  <p class="truncate" style="display: -webkit-box;
+                  -webkit-box-orient: vertical;
+                  -webkit-line-clamp: 3;
+                  overflow: hidden;
+                  background-color: white;">
+                    {{a.isi}}
+                  </p>
+                  <a style="color: blue !important;" href="{% url 'isiArtikel' pk=a.ArtikelId %}">See more...</a>
+                  <div class="garishr">{{a.tanggal}}</div>
+              </div>
+            </div>
+          </form>
           </div>
-          </div>
-        </div>
-        {% endfor %}  
+          {% endfor %}  
         </div> 
     </div>
 

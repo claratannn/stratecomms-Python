@@ -43,3 +43,18 @@ u{
     height: 80% !important;
     color: black !important;
 }
+
+.see-more{
+    background-color: transparent; 
+    border: none; 
+    padding: 0; 
+    text-decoration: underline; 
+    color: blue;
+}
+
+.truncate {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+     }
