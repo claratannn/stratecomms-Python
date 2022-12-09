@@ -50,7 +50,28 @@ def editArtikel(request):
   return render(request, 'admin/editArtikel.html')
 
 def editJadwal(request):
+  connection = connect()
+  cursor = connection.cursor(dictionary= True)
+  cursor.execute('select * from portofolio')
+  data = cursor.fetchall()
+
+  if request.method == "POST":
+    fotoPoster = request.POST.get('fotoPoster')
+    updateTitle = request.POST.get('updateTitle')
+    updateJudul1 = request.POST.get('updateJudul1')
+    updateDeskripsi1 = request.POST.get('updateDeskripsi1')
+    updateJudul2 = request.POST.get('updateJudul2')
+    updateDeskripsi2 = request.POST.get('updateDeskripsi2')
+    updateJudul3 = request.POST.get('updateJudul3')
+    updateDeskripsi3 = request.POST.get('updateDeskripsi3')
+    button = request.POST.get('button')
+
+    button = button.split('-')
+    if button[0] == 'UpdateAdminPorto':
+      cursor.execute(f'update portofolio set fotoPoster = "{fotoPoster}",updateTitle = "{updateTitle}", updateJudul1 = "{updateJudul1}", updateJudul2 = "{updateJudul2}", updateJudul3 = "{updateJudul3}", updateDeskripsi1 = "{updateDeskripsi1}", updateDeskripsi2 = "{updateDeskripsi2}", updateDeskripsi3 = "{updateDeskripsi3}" where PortofolioID = "{PortofolioId}"')
+
   return render(request, 'admin/editJadwal.html')
+
 
 def adminJadwal(request):
   return render(request, 'admin/adminJadwal.html')
